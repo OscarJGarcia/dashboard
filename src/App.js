@@ -1,26 +1,26 @@
-import React, {useEffect} from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import React from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {FiSettings} from 'react-icons/fi';
 import {TooltipComponent} from '@syncfusion/ej2-react-popups';
 import './App.css';
-import {Navbar, Footer, Sidebar, ThemeSettings} from "./components";
+import {Navbar, Sidebar} from "./components";
 import {
-    Ecommerce,
-    Orders,
-    Calendar,
-    Line,
-    Employees,
-    Stacked,
-    Pyramid,
-    Customers,
-    Kanban,
     Area,
     Bar,
-    Pie,
-    Financial,
+    Calendar,
     ColorMapping,
     ColorPicker,
+    Customers,
+    Ecommerce,
     Editor,
+    Employees,
+    Financial,
+    Kanban,
+    Line,
+    Orders,
+    Pie,
+    Pyramid,
+    Stacked,
 } from "./pages";
 import {useStateContext} from "./contexts/ContextProvider";
 
@@ -67,7 +67,7 @@ const App = () => {
                             <Route path='/kanban' element={<Kanban/>}/>
                             <Route path='/editor' element={<Editor/>}/>
                             <Route path='/calendar' element={<Calendar/>}/>
-                            <Route path='/ColorPicker' element={<ColorPicker/>}/>
+                            <Route path='/color-picker' element={<ColorPicker/>}/>
 
                             {/* Charts */}
                             <Route path='/line' element={<Line/>}/>
