@@ -8,7 +8,7 @@ import {RiNotification3Line} from "react-icons/ri";
 import {MdKeyboardArrowDown} from "react-icons/md";
 
 import avatar from '../data/avatar.jpg';
-import {Cart, Chat, Notification} from "./index";
+import {Cart, Chat, Notification, UserProfile} from "./index";
 
 const NavButton = ({title, customFunc, icon, color, dotColor}) => (
     <TooltipComponent content={title} position="BottomCenter">
@@ -71,7 +71,7 @@ const Navbar = () => {
                 </NavButton>
                 <TooltipComponent content="profile"
                                   position="BottomCenter">
-                    <div className="flex items-center gap-2 cursor-pinter p-1 hover:bg-light-gray rounded-lg"
+                    <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
                          onClick={() => handleClick('userProfile')}>
                         <img src={avatar} className="rounded-full w-8 h-8"/>
                         <p>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 {isClicked.cart && <Cart></Cart>}
                 {isClicked.chat && <Chat></Chat>}
                 {isClicked.notification && <Notification></Notification>}
-                {isClicked.userProfile && <Cart></Cart>}
+                {isClicked.userProfile && <UserProfile></UserProfile>}
             </div>
         </div>
     );
